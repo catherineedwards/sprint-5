@@ -1,8 +1,7 @@
 // This is the first exercise
 var abc = ""; 
-for (let number = 0; number <= 6;) {
+for (let number = 0; number <= 6; number++) {
   abc += "#";
-  number += 1;
   console.log(abc);
 }
 
@@ -23,13 +22,18 @@ for (let number = 0; number <= 100;) {
 
 // This is the third exercise
 
-let column = " # # # #"
-let row = "# # # #"
-for (let i = 0; i <= 7; i++) {
-  if (i % 2 == 0) {
-    console.log(column);
-  } else 
-    console.log(row);
+let size = 7
+let result = " ";
+for (let i = 0; i <= size; i++) {
+  result = "";
+	if (i % 2 == 0) {
+      	result += " ";
+    }
+  for (let j = 0; j <= size; j++) {
+    if (j % 2 == 0) {
+    	result += "#";
+    } else 
+      	result += " ";
+  }
+  console.log(result);
 }
-
-// This is a tremendously cheeky way of building this chess table. I'm going to discuss with experienced developers a way that meets the original brief, but I just cannot get my head around it at this point.
